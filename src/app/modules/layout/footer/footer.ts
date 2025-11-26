@@ -5,6 +5,5 @@ import { Component, ViewEncapsulation } from '@angular/core';
   standalone: false,
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
-  encapsulation: ViewEncapsulation.None,
 })
 export class Footer {}

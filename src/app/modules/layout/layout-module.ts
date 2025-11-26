@@ -23,7 +23,8 @@ import { RouterModule } from '@angular/router';
   exports: [
     Layout,
     Header,
-    Footer
+    Footer,
+    LandingPage
   ]
 })
 export class LayoutModule { }

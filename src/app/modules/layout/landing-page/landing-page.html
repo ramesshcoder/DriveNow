@@ -1,1 +1,47 @@
-<p>landing-page works!</p>
+
+<section id="home" class="landing__hero">
+  <div class="landing__hero-content">
+    <h1 class="landing__title">
+      Rent Premium & Budget Cars with <span>DriveNow</span>
+    </h1>
+
+    <p class="landing__subtitle">
+      Book online and get local delivery at your doorstep.
+    </p>
+
+    <button pButton class="landing__btn" (click)="scrollToBooking()">
+      Book Your Ride
+    </button>
+  </div>
+</section>
+
+<section id="cars" class="landing__cars p-mt-6 p-px-4">
+  <h2 class="landing__section-title">Our Featured Cars</h2>
+
+  <div class="p-d-flex p-flex-wrap p-jc-center p-gap-4">
+    <div class="landing__car-card" *ngFor="let car of carsList">
+      <img [src]="car.image" class="landing__car-img" />
+      <h3 class="landing__car-title">{{ car.name }}</h3>
+      <p class="landing__car-price">{{ car.price }}</p>
+    </div>
+  </div>
+</section>
+
+<section id="booking" class="landing__booking p-px-4">
+  <h2 class="landing__booking-title">Book Your Ride</h2>
+
+  <form class="landing__form">
+    <input type="text" placeholder="Full Name" required class="landing__input" />
+    <input type="email" placeholder="Email Address" required class="landing__input" />
+    <input type="date" class="landing__input" required />
+
+    <select class="landing__input" required>
+      <option value="">Select Car</option>
+      <option *ngFor="let car of carsList">{{ car.name }}</option>
+    </select>
+
+    <button type="submit" class="landing__submit-btn">
+      Confirm Booking
+    </button>
+  </form>
+</section>
