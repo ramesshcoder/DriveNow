@@ -1,4 +1,4 @@
-/* ====== HERO SECTION ====== */
+/* ================= HERO SECTION ================= */
 .landing__hero {
   height: 100vh;
   background: url("https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80")
@@ -7,96 +7,124 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
+.landing__hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+/* Animation */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
-
-  &-content {
-    position: relative;
-    text-align: center;
-    color: #fff;
-    max-width: 650px;
-    padding: 1rem;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-.landing__title {
-  font-size: 2.4rem;
-  font-weight: 700;
+.landing__hero-content {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  max-width: 650px;
+  padding: 1rem;
+  animation: heroFadeUp 1.1s ease-out forwards;
+}
 
-  span {
-    color: #00d4ff;
-  }
+.landing__title {
+  font-size: 2.7rem;
+  font-weight: 700;
+}
+
+.landing__title span {
+  color: #00d4ff;
 }
 
 .landing__subtitle {
   margin-top: 1rem;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
 }
 
 .landing__btn {
   margin-top: 1.8rem;
-  padding: 0.8rem 2rem;
+  padding: 0.85rem 2.1rem;
   border-radius: 50px;
   background: linear-gradient(135deg, #007bff, #00d4ff);
   color: #fff;
   border: none;
   cursor: pointer;
   transition: 0.3s ease;
-
-  &:hover {
-    transform: scale(1.05);
-  }
+  font-size: 1rem;
 }
 
-/* ====== CARS SECTION ====== */
+.landing__btn:hover {
+  transform: scale(1.07);
+}
+
+
+/* ================= CARS SECTION ================= */
 .landing__cars {
   text-align: center;
-  padding-top: 4rem;
+  padding: 4rem 2rem;
 }
 
 .landing__section-title {
-  font-size: 2rem;
+  font-size: 2.2rem;
   margin-bottom: 2rem;
+  font-weight: 700;
 }
 
-.landing__car-card {
-  width: 290px;
-  background: #fff;
-  border-radius: 14px;
-  overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: 0.3s ease;
+/* Cars container */
+.landing__cars-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
 
-  &:hover {
-    transform: translateY(-8px);
-  }
+/* Car Card */
+.landing__car-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: 0.3s ease;
+}
+
+.landing__car-card:hover {
+  transform: translateY(-10px);
 }
 
 .landing__car-img {
   width: 100%;
-  height: 180px;
+  height: 190px;
   object-fit: cover;
 }
 
 .landing__car-title {
-  margin: 1rem 0 0.4rem;
-  font-size: 1.3rem;
+  margin: 1rem 0 0.3rem;
+  font-size: 1.35rem;
 }
 
 .landing__car-price {
   margin-bottom: 1rem;
   color: #666;
+  font-size: 1rem;
 }
 
-/* ====== BOOKING SECTION ====== */
+
+/* ================= BOOKING SECTION ================= */
 .landing__booking {
   margin-top: 4rem;
-  padding: 3rem 0;
+  padding: 3rem 1rem;
   background: linear-gradient(135deg, #007bff, #00d4ff);
   color: #fff;
   text-align: center;
@@ -113,14 +141,14 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.2);
   padding: 1.8rem;
   border-radius: 14px;
   backdrop-filter: blur(10px);
 }
 
 .landing__input {
-  padding: 0.7rem 1rem;
+  padding: 0.8rem 1rem;
   border-radius: 8px;
   border: none;
   outline: none;
@@ -128,7 +156,7 @@
 }
 
 .landing__submit-btn {
-  padding: 0.7rem;
+  padding: 0.8rem;
   background: #fff;
   color: #007bff;
   font-weight: 600;
@@ -136,8 +164,8 @@
   border: none;
   cursor: pointer;
   transition: 0.25s ease;
+}
 
-  &:hover {
-    background: #eaf4ff;
-  }
+.landing__submit-btn:hover {
+  background: #eaf4ff;
 }
