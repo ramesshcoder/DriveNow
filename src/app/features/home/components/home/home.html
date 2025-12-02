@@ -1,1 +1,49 @@
-<p>home works!</p>
+<!-- HERO -->
+<section id="home" class="home-hero flex justify-content-center align-items-center text-center" style="height:100vh; background:url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;">
+  <div class="px-4">
+    <h1 class="text-4xl font-bold text-white mb-3">
+      Rent Premium & Budget Cars with <span class="text-blue-500">DriveNow</span>
+    </h1>
+    <p class="text-white mb-4">Book online and get local delivery at your doorstep.</p>
+    <button class="btn btn-primary py-2 px-6" id="bookBtn">Book Your Ride</button>
+  </div>
+</section>
+
+<!-- CARS -->
+<section id="cars" class="home-cars py-8 text-center">
+  <h2 class="text-2xl mb-6">Our Featured Cars</h2>
+  <div class="flex flex-wrap justify-content-center gap-4">
+    <div class="shadow-3 m-2 home-car-card" style="width:300px; text-align:center;">
+      <img src="https://images.unsplash.com/photo-1549924231-f129b911e442?auto=format&fit=crop&w=600&q=60" class="mb-2" />
+      <h3 class="font-semibold mb-1">BMW 5 Series</h3>
+      <p class="text-gray-700 mb-2">Luxury Sedan | ₹4500/day</p>
+    </div>
+    <div class="shadow-3 m-2 home-car-card" style="width:300px; text-align:center;">
+      <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=600&q=60" class="mb-2" />
+      <h3 class="font-semibold mb-1">Audi A4</h3>
+      <p class="text-gray-700 mb-2">Premium Sedan | ₹4000/day</p>
+    </div>
+    <div class="shadow-3 m-2 home-car-card" style="width:300px; text-align:center;">
+      <img src="https://images.unsplash.com/photo-1617814076820-5dcf83f86a2f?auto=format&fit=crop&w=600&q=60" class="mb-2" />
+      <h3 class="font-semibold mb-1">Hyundai i20</h3>
+      <p class="text-gray-700 mb-2">Budget Hatchback | ₹1500/day</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="home-booking p-py-8 p-text-center" style="background: linear-gradient(135deg, #007bff, #00d4ff);">
+  <h2 class="text-2xl mb-4 text-white">Book Your Ride</h2>
+  <form class="p-d-flex p-flex-column p-ai-center p-gap-3" style="max-width:400px; margin:auto;">
+    <input type="text" placeholder="Full Name" class="p-py-2 p-px-3" required />
+    <input type="email" placeholder="Email Address" class="p-py-2 p-px-3" required />
+    <input type="date" class="p-py-2 p-px-3" required />
+    <select class="p-py-2 p-px-3" required>
+      <option value="">Select Car</option>
+      <option>BMW 5 Series</option>
+      <option>Audi A4</option>
+      <option>Hyundai i20</option>
+    </select>
+    <button type="submit" class="btn btn-primary p-py-2 p-px-4">Confirm Booking</button>
+  </form>
+</section>
