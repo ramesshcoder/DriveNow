@@ -2,29 +2,21 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Header } from './header/header';
 import { Footer } from './footer/footer';
-import { LandingPage } from './landing-page/landing-page';
-import { Layout } from './layout/layout';
-import { RouterModule } from '@angular/router';
+import { footer } from '@primeuix/themes/aura/confirmpopup';
 
 
 
 @NgModule({
   declarations: [
     Header,
-    Footer,
-    LandingPage,
-    Layout
+    Footer
   ],
   imports: [
-    CommonModule,
-    RouterModule
-  ]
-  ,
-  exports: [
-    Layout,
+    CommonModule
+  ],
+  exports:[
     Header,
-    Footer,
-    LandingPage
+    Footer
   ]
 })
 export class LayoutModule { }

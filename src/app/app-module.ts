@@ -7,25 +7,22 @@ import { CalendarModule } from 'primeng/calendar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MenubarModule } from 'primeng/menubar';
 import { App } from './app';
-import { LayoutModule } from './modules/layout/layout-module';
+import { LayoutModule } from './layout/layout-module';
+import { Router, RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    App,
-  
-  ],
+  declarations: [App],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,CalendarModule,
+    FormsModule,
+    CalendarModule,
     BrowserAnimationsModule,
     MenubarModule,
-    LayoutModule
+    LayoutModule,
+    RouterModule
   ],
-  providers: [
-    provideBrowserGlobalErrorListeners(),
- 
-  ],
-  bootstrap: [App]
+  providers: [provideBrowserGlobalErrorListeners()],
+  bootstrap: [App],
 })
-export class AppModule { }
+export class AppModule {}
